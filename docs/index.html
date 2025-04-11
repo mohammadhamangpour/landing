@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camionet</title>
+  <link rel="icon" href="fav.png" type="image/png">
+  <img src="logo.png"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #ddd;
+      text-align: center;
+    }
+    .logo {
+      width: 200px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .btn {
+      display: flex;              /* Add this */
+      align-items: center;        /* Vertically center */
+      gap: 8px;                   /* Space between text and image */
+      padding: 10px 20px;
+      background: #1a8f3f;
+      color: #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .btn-text {
+  padding: 0;                 /* No vertical padding needed */
+  font-size: 14px;
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+}
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 0px;
+      padding: 20px;
+    }
+    .card {
+      border-radius: 10px;
+      padding: 15px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- <img src="logo.png" alt="logo" class="logo" /> -->
+  <h1>Camionet | کامیونت</h1>
+  <div class="btn-group">
+    <div class="btn" id="btn-bazaar">
+      <span class="btn-text">دانلود از بازار</span>
+      <img src="android-icon.png" alt="icon" class="btn-icon">
+    </div>
+    <div class="btn" id="btn-store">
+      <span class="btn-text">دانلود از استور</span>
+      <img src="android-icon.png" alt="icon" class="btn-icon">
+    </div>
+    <div class="btn" id="btn-direct">
+      <span class="btn-text">دانلود مستقیم</span>
+      <img src="android-icon.png" alt="icon" class="btn-icon">
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <img src="happy-driver.png" alt="card" />
+      <p>با نصب کامیونت روی سیستم تان ماشین تان را هم خوشحال تر کنید و همچنین حال جیبتان را. با کامیونت همه خوشحالن حتی ما توسعه دهندگان کامیونت</p>
+    </div>
+    <div class="card">
+      <img src="happy-car.png" alt="card" />
+      <p>با نصب کامیونت روی سیستم تان ماشین تان را هم خوشحال تر کنید و همچنین حال جیبتان را. با کامیونت همه خوشحالن حتی ما توسعه دهندگان کامیونت</p>
+    </div>
+    <div class="card">
+      <img src="driver.png" alt="card" />
+      <p>با نصب کامیونت روی سیستم تان ماشین تان را هم خوشحال تر کنید و همچنین حال جیبتان را...</p>
+    </div>
+    <div class="card">
+      <img src="customer.png" alt="card" />
+      <p>با نصب کامیونت روی سیستم تان ماشین تان را هم خوشحال تر کنید و همچنین حال جیبتان را...</p>
+    </div>
+  </div>
+
+  <script>
+
+  function redirectTo(url) {
+  window.location.href = url;
+}
+
+// Adding event listeners to buttons
+document.getElementById('btn-bazaar').addEventListener('click', function() {
+  redirectTo('https://www.google.com');
+});
+
+document.getElementById('btn-store').addEventListener('click', function() {
+  redirectTo('https://camionet.org');
+});
+
+document.getElementById('btn-direct').addEventListener('click', function() {
+  redirectTo('https://yahoo.com');
+});
+</script>
+</body>
+</html>
